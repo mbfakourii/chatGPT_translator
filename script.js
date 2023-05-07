@@ -8,7 +8,7 @@ $(document).ready(function() {
             url: 'https://api.openai.com/v1/chat/completions',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer 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'
+                'Authorization': 'Bearer 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'
             },
             method: 'POST',
             data: JSON.stringify({
