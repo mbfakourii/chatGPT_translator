@@ -1,2 +1,2 @@
-# chatGPT_translate
+# chatGPT_translator
 A translator with chatGPT
