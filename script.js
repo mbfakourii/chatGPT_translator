@@ -1,14 +1,20 @@
+var apiKey2 = localStorage.getItem("api-key");
+document.getElementById("api-key").value=apiKey2
+		
 $(document).ready(function() {
     $('#translate-btn').click(function() {
+        var apiKey = $('#api-key').val();
         var inputText = $('#input').val();
         var sourceLang = $('#source-language').val();
         var targetLang = $('#target-language').val();
+		
+		localStorage.setItem("api-key", apiKey);
 		
         $.ajax({
             url: 'https://api.openai.com/v1/chat/completions',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer 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'
+                'Authorization': `Bearer ${apiKey}`
             },
             method: 'POST',
             data: JSON.stringify({
